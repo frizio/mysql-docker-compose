@@ -1,0 +1,22 @@
+version: '3.3'
+
+services:
+  mysqldb:
+    image: mysql:8.0.16
+    container_name: mysql-container
+    #restart: always
+    environment:
+      MYSQL_DATABASE: 'demo'           
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password1;'
+      MYSQL_ROOT_PASSWORD: 'password1;'
+    ports: 
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - $HOME/Docker-Data/mysql-data:/var/lib/mysql
+
+volumes:
+  mysqldb-data:
+    driver: local
