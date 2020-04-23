@@ -3,6 +3,7 @@ USE `employee_directory`;
 
 --
 -- Table structure for table `employee`
+-- tutorial from Chad Darb Udemy Course "Spring Framework and Spring Boot..."
 --
 
 DROP TABLE IF EXISTS `employee`;
